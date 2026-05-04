@@ -1,480 +1,1442 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Abbass Jaber — Lead Full Stack Engineer</title>
+		<style>
+			:root {
+				--bg: oklch(14% 0.006 230);
+				--bg-elev: oklch(17% 0.008 230);
+				--surface: oklch(20% 0.008 230);
+				--border: oklch(26% 0.008 230);
+				--border-strong: oklch(34% 0.01 230);
+				--fg: oklch(96% 0.005 230);
+				--muted: oklch(64% 0.012 230);
+				--dim: oklch(46% 0.012 230);
+				--accent: oklch(62% 0.11 175);
+				--accent-dim: oklch(35% 0.07 175);
 
-<head>
-    <!-- Title Of Site -->
-    <title>Abbass Jaber | Portfolio</title>
+				--font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+					"Inter", system-ui, sans-serif;
+				--font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter",
+					system-ui, sans-serif;
+				--font-mono: ui-monospace, "SF Mono", "JetBrains Mono", "Geist Mono",
+					Menlo, monospace;
 
-    <link rel="shortcut icon" href="favicon.svg">
-    <!-- *********** CSS Files *********** -->
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/d1zTmHAmwVyU.css">
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="css/OFMbcogWB0eV.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/iqKeSFAG7Ibw.css">
-    <!-- Pagepiling -->
-    <link rel="stylesheet" href="css/MSsbYtpejPHB.css">
+				--max-w: 1240px;
+				--gutter: 32px;
+			}
 
-    <!-- Main Style CSS -->
-    <link rel="stylesheet" href="css/vleMB7Heo1Qw.css">
-    <!-- Template Color -->
-    <link rel="stylesheet" href="css/jf7o4WtrhzBd.css" id="optional-color">
-</head>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			html,
+			body {
+				background: var(--bg);
+				color: var(--fg);
+				font-family: var(--font-body);
+				-webkit-font-smoothing: antialiased;
+			}
+			body {
+				line-height: 1.55;
+				font-size: 15.5px;
+				letter-spacing: -0.005em;
+			}
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+			img {
+				max-width: 100%;
+				display: block;
+			}
 
-<body id="home" class="template-index index-toggle">
-    <!-- Preloader -->
-    <div id="preloader" class="preloader active">
-        <div class="preloader-inner">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-    <!-- End Preloader -->
+			.container {
+				max-width: var(--max-w);
+				margin: 0 auto;
+				padding: 0 var(--gutter);
+			}
+			.mono {
+				font-family: var(--font-mono);
+			}
+			.eyebrow {
+				font-family: var(--font-mono);
+				font-size: 11.5px;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+				color: var(--accent);
+				display: inline-flex;
+				align-items: center;
+				gap: 10px;
+				font-weight: 500;
+			}
+			.eyebrow::before {
+				content: "";
+				display: inline-block;
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background: var(--accent);
+			}
 
-    <!-- Page Wrapper -->
-    <div id="page-wrapper" class="page-wrapper h-100 clearfix">
-        <!-- Header Section -->
-        <header id="header" class="site-header">
-            <!-- Logo -->
-            <div class="logo navbar-brand p-0 m-0 w-100">
-                <!-- Text Logo -->
-                <a class="text-logo" href="#home">Abbass</a>
-                <!-- End Text Logo -->
-                <!-- Image Logo -->
-                <!-- <img src="assets/images/logo.png" alt="logo" class="img-fluid" /> -->
-                <!-- End Image Logo -->
-            </div>
-            <!-- End Logo -->
-            <!-- Menu Toggle -->
-            <button class="menu-toggle menu-toggle-line" type="button"><span></span><span></span><span></span></button>
-            <!-- End Menu Toggle -->
-            <!-- Overlay Menu -->
-            <div class="overlay-menu d-flex align-items-center mobile-menu-hide">
-                <!-- Container -->
-                <div class="container">
-                    <!-- Row -->
-                    <div class="row">
-                        <div class="col-lg-8 offset-lg-2 overlay-nav">
-                            <!-- Logo -->
-                            <div class="logo navbar-brand p-0 m-0 w-100 mb-3 mb-lg-5">
-                                <!-- Text Logo -->
-                                <a class="text-logo sublink" href="index.html">Abbass</a>
-                                <!-- End Text Logo -->
-                                <!-- Image Logo -->
-                                <!-- <a href="index.html" class="logo-img sublink"><img class="img-fluid" src="assets/images/logo.png" alt="logo" title="Logo" /></a> -->
-                                <!-- End Image Logo -->
-                            </div>
-                            <!-- End Logo -->
-                            <!-- Main Menu -->
-                            <div id="main-navigation" class="main-navigation float-left w-50 pr-2">
-                                <!-- Close Button -->
-                                <a href="#" class="closeNav-btn clearfix" id="closeNav"><i class="fa fa-close"></i></a>
-                                <!-- End Close Button -->
-                                <ul id="menu" class="list-group text-left menu-nav">
-                                    <li data-menuanchor="home" class="list-group-item active"><a href="#home"><i
-                                                class="fa fa-home mr-2"></i>Home</a></li>
-                                    <li data-menuanchor="about" class="list-group-item"><a href="#about"><i
-                                                class="fa fa-user mr-2"></i>About me</a></li>
-                                    <li data-menuanchor="services" class="list-group-item"><a href="#services"><i
-                                                class="fa fa-briefcase mr-2"></i>Services</a></li>
-                                    <li data-menuanchor="contact" class="list-group-item"><a href="#contact"><i
-                                                class="fa fa-address-book mr-2"></i>Contact</a></li>
-                                </ul>
-                            </div>
-                            <!-- End Main Menu -->
-                            <!-- Contact Details -->
-                            <div class="contact-details float-right w-50 pl-2 mt-2 mt-sm-0">
-                                <ul class="list-group contact-info text-left mb-0">
-                                    <li class="list-group-item"><span class="title">Contact Info :</span></li>
-                                    <li class="list-group-item"><span><i class="fa fa-map-marker mr-2"></i>Beirut, Lebanon</span></li>
-                                    <li class="list-group-item"><span><i class="fa fa-envelope mr-2"></i><a
-                                                href="mailto:abbassjaber.online@gmail.com">abbassjaber.online@gmail.com</a></span></li>
-                                    <li class="list-group-item"><span class="title">Follow me :</span></li>
-                                    <li class="list-group-item">
-                                        <ul class="list-inline socails">
-                                            <li class="list-inline-item"><a href="https://github.com/AbbassJaber" data-toggle="tooltip"
-                                                    data-placement="top" data-original-title="Github"><i
-                                                        class="fa fa-github"></i></a></li>
-                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/abbass-jaber" data-toggle="tooltip"
-                                                    data-placement="top" data-original-title="Linkedin"><i
-                                                        class="fa fa-linkedin"></i></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- End Contact Details -->
-                            <!-- Copyright -->
-                            <!-- End Copyright -->
-                        </div>
-                    </div>
-                    <!-- End Row -->
-                </div>
-                <!-- End Container -->
-            </div>
-            <!-- End Overlay Menu -->
-        </header>
-        <!-- End Header Section -->
+			/* NAV */
+			.nav {
+				position: sticky;
+				top: 0;
+				z-index: 50;
+				backdrop-filter: blur(20px) saturate(180%);
+				-webkit-backdrop-filter: blur(20px) saturate(180%);
+				background: color-mix(in oklch, var(--bg) 84%, transparent);
+				border-bottom: 1px solid var(--border);
+			}
+			.nav-inner {
+				max-width: var(--max-w);
+				margin: 0 auto;
+				padding: 0 var(--gutter);
+				display: flex;
+				align-items: stretch;
+				height: 54px;
+			}
+			.logo {
+				display: flex;
+				align-items: center;
+				gap: 11px;
+				padding-right: 28px;
+				border-right: 1px solid var(--border);
+				text-decoration: none;
+			}
+			.logo-mark {
+				width: 28px;
+				height: 28px;
+				border: 1px solid var(--border-strong);
+				border-radius: 5px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-family: var(--font-mono);
+				font-size: 10.5px;
+				letter-spacing: 0.04em;
+				color: var(--accent);
+				font-weight: 600;
+				background: color-mix(in oklch, var(--accent) 9%, transparent);
+				flex-shrink: 0;
+			}
+			.logo-name {
+				font-family: var(--font-display);
+				font-weight: 600;
+				font-size: 14px;
+				letter-spacing: -0.02em;
+				color: var(--fg);
+			}
+			.nav-links {
+				display: flex;
+				align-items: stretch;
+				padding-left: 0;
+				gap: 0;
+				flex: 1;
+			}
+			.nav-links a {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+				padding: 0 15px;
+				font-size: 13px;
+				color: var(--muted);
+				position: relative;
+			}
+			.nav-links a .nav-num {
+				font-family: var(--font-mono);
+				font-size: 9.5px;
+				letter-spacing: 0.06em;
+				color: var(--dim);
+			}
+			.nav-cta {
+				display: flex;
+				align-items: center;
+				gap: 7px;
+				padding-left: 24px;
+				margin-left: auto;
+				border-left: 1px solid var(--border);
+				font-family: var(--font-mono);
+				font-size: 12px;
+				letter-spacing: 0.06em;
+				color: var(--accent);
+			}
+			.nav-cta .ar {
+				font-size: 14px;
+			}
 
-        <!-- Main Wrapper -->
-        <main id="pagepiling" class="main-wrapper">
-            <!-- Banner Section -->
-            <section id="banner" class="section pp-scrollable bg-white banner-section card-inner active">
-                <div class="card-inner-content h-100 banner-bg-img d-flex align-items-center">
-                    <!-- Container -->
-                    <div class="container">
-                        <!-- Banner Inner -->
-                        <div class="banner-inner d-flex align-items-center justify-content-center">
-                            <!-- Banner Image -->
-                            <div class="banner-img mb-4 mb-lg-0">
-                                <img class="img-fluid center-picture" src="images/AbbassProfile.jpeg" alt="Profile">
-                            </div>
-                            <!-- End Banner Image -->
-                            <!-- Banner Text -->
-                            <div class="banner-text ml-lg-5">
-                                <h2>Hi There!</h2>
-                                <h3 class="d-sm-none d-block text-uppercase headline">I'M <b
-                                        class="is-visible">Abbass</b></h3>
-                                <h3 class="d-sm-block d-none cd-headline clip text-uppercase">I'm
-                                    <span class="cd-words-wrapper">
-                                        <b class="is-visible">Abbass Jaber</b>
-                                        <b class="is-hidden">a Full Stack Developer</b>
-                                        <b class="is-hidden">a Cloud Enthusiast</b>
-                                    </span>
-                                </h3>
-                                <div >
-                                    <p>Dedicated and efficient Full Stack Developer with a passion for building and optimizing websites and applications. Experienced in the Software Development Life Cycle including designing, developing, coding, and software architecture.</p>
-                                </div>
-                                <div class="social-links d-flex flex-wrap">
-                                    <a href="https://github.com/AbbassJaber" data-toggle="tooltip" data-placement="top"
-                                        data-original-title="Github"><i class="fa fa-github"></i></a>
-                                    <a href="https://www.linkedin.com/in/abbass-jaber" data-toggle="tooltip" data-placement="top"
-                                        data-original-title="Linkedin"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                                <div class="info-button">
-                                    <a href="#about" class="btn btn-secondary about-btn mr-sm-3"><span><i
-                                                class="fa fa-user mr-2"></i>More about me</span></a>
-                                    
-                                </div>
-                            </div>
-                            <!-- End Banner Text -->
-                        </div>
-                        <!-- Banner Inner -->
-                        <!-- Bottom Scroll Arrow -->
-                        <a href="#about" class="scroll-down-arrow smooth-scroll-down about-btn d-none d-lg-block"></a>
-                        <!-- End Bottom Scroll Arrow -->
-                    </div>
-                    <!-- End Container -->
-                </div>
-            </section>
-            <!-- End Banner Section -->
+			/* HERO */
+			.hero {
+				position: relative;
+				padding: 152px 0 132px;
+				overflow: hidden;
+				border-bottom: 1px solid var(--border);
+			}
+			.hero-grid-bg {
+				position: absolute;
+				inset: 0;
+				pointer-events: none;
+				background-image: linear-gradient(
+						to right,
+						var(--border) 1px,
+						transparent 1px
+					),
+					linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+				background-size: 64px 64px;
+				mask-image: radial-gradient(
+					ellipse 70% 60% at 50% 40%,
+					black 30%,
+					transparent 80%
+				);
+				-webkit-mask-image: radial-gradient(
+					ellipse 70% 60% at 50% 40%,
+					black 30%,
+					transparent 80%
+				);
+				opacity: 0.55;
+			}
+			.hero-glow {
+				position: absolute;
+				inset: -200px;
+				pointer-events: none;
+				background: radial-gradient(
+					620px 420px at 52% 32%,
+					color-mix(in oklch, var(--accent) 16%, transparent),
+					transparent 70%
+				);
+			}
+			.hero-inner {
+				position: relative;
+			}
+			.hero-meta {
+				display: flex;
+				align-items: center;
+				gap: 14px;
+				font-family: var(--font-mono);
+				font-size: 12px;
+				color: var(--muted);
+				margin-bottom: 36px;
+			}
+			.hero-meta .status {
+				display: inline-flex;
+				align-items: center;
+				gap: 9px;
+				color: var(--accent);
+			}
+			.hero-meta .status .pulse {
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background: var(--accent);
+				box-shadow: 0 0 0 3px
+					color-mix(in oklch, var(--accent) 22%, transparent);
+			}
+			.hero-meta .sep {
+				color: var(--dim);
+			}
 
-            <!-- About Section -->
-            <section id="about" class="section pp-scrollable bg-white about card-inner">
-                <div class="card-inner-content h-100">
-                    <!-- Container -->
-                    <div class="container">
-                        <!-- Section Title -->
-                        <div class="section-title">
-                            <h1>About <span>me</span></h1>
-                            <!-- <span class="title-bg">Resume</span> -->
-                            <span class="separator"></span>
-                        </div>
-                        <!-- End Section Title --> 
-                        <!-- Experience Education Content Block -->
-                        <div class="content-block">
-                            <!-- Section Sub Title -->
-                            <h3 class="section-subtitle text-center text-uppercase mb-5">Career Path  </h3>
-                            <!-- End Section Sub Title -->
-                            <!-- Row -->
-                            <div class="row">
-                                <!-- Education -->
-                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                    <h4 class="education-title block-title text-center text-uppercase mb-4">Education & Certifications
-                                    </h4>
-                                    <div class="education pl-4">
-                                        <div class="education-box mb-4">
-                                            <h5 class="box-title">B.S In Computer Science</h5>
-                                            <div class="item-details mb-2 mb-sm-1">
-                                                <span class="university d-inline-block mr-3"><i
-                                                        class="fa fa-book mr-2"></i>Lebanese University</span>
-                                                <span class="year d-inline-block"><i class="fa fa-calendar mr-2"></i>OCTOBER 2017 – SEPTEMBER 2020</span>
-                                            </div>
-                                        </div>
-                                        <div class="education-box mb-4">
-                                            <h5 class="box-title">AWS Certified Cloud Practitioner</h5>
-                                            <div class="item-details mb-2 mb-sm-1">
-                                                <span class="university d-inline-block mr-3"><i
-                                                        class="fa fa-book mr-2"></i>AWS</span>
-                                                <span class="year d-inline-block"><i class="fa fa-calendar mr-2"></i>APRIL 2022 – APRIL 2025</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                    <h4 class="experince-title block-title text-center text-uppercase mb-4">Experience & Training
-                                    </h4>
-                                    <div class="experince pl-4">
-                                        <div class="experince-box mb-4">
-                                            <h5 class="box-title">Full Stack Developer</h5>
-                                            <div class="item-details mb-2 mb-sm-1">
-                                                <span class="university d-inline-block mr-3"><i
-                                                        class="fa fa-book mr-2"></i>VenBil</span>
-                                                <span class="year d-inline-block"><i class="fa fa-calendar mr-2"></i>SEPTEMBER 2019 - JANUARY 2021</span>
-                                            </div>
-                                            <p class="box-description">Implemented a vendor billing system that helps vendors and suppliers generate and manage invoices to bill their customers for goods and services.</p>
-                                        </div>
-                                        <div class="experince-box mb-4">
-                                            <h5 class="box-title">Full Stack Developer</h5>
-                                            <div class="item-details mb-2 mb-sm-1">
-                                                <span class="university d-inline-block mr-3"><i
-                                                        class="fa fa-book mr-2"></i>Tuhoon</span>
-                                                <span class="year d-inline-block"><i
-                                                        class="fa fa-calendar mr-2"></i>FEBRUARY 2021 <span
-                                                        class="badge badge-success current ml-2">Present</span></span>
-                                            </div>
-                                            <p class="box-description">Built the first Arabic meditation app in the MENA Region from scratch. Implemented backend layer, content management system, server-to-server payment integrations, and scalable infrastructure.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-            </section>
+			.hero h1 {
+				font-family: var(--font-display);
+				font-size: clamp(58px, 8.6vw, 124px);
+				line-height: 0.95;
+				letter-spacing: -0.038em;
+				font-weight: 600;
+				max-width: 14ch;
+				text-wrap: balance;
+			}
+			.hero h1 .role {
+				color: var(--muted);
+				font-weight: 500;
+			}
+			.hero p.tagline {
+				margin-top: 32px;
+				font-size: clamp(17px, 1.5vw, 21px);
+				color: var(--muted);
+				max-width: 56ch;
+				line-height: 1.55;
+				text-wrap: pretty;
+			}
+			.hero-cta-row {
+				margin-top: 48px;
+				display: flex;
+				gap: 12px;
+				align-items: center;
+			}
+			.btn {
+				display: inline-flex;
+				align-items: center;
+				gap: 10px;
+				padding: 13px 19px;
+				border-radius: 8px;
+				font-size: 14px;
+				border: 1px solid transparent;
+				font-family: var(--font-body);
+			}
+			.btn-primary {
+				background: var(--fg);
+				color: var(--bg);
+				font-weight: 500;
+			}
+			.btn-primary .arrow {
+				font-family: var(--font-mono);
+			}
+			.btn-secondary {
+				border-color: var(--border-strong);
+				color: var(--fg);
+			}
 
-            <!-- Service Section -->
-            <section id="services" class="section pp-scrollable bg-white service card-inner">
-                <div class="card-inner-content h-100">
-                    <!-- Container -->
-                    <div class="container">
-                        <!-- Section Title -->
-                        <div class="section-title">
-                            <h1>My <span>Services</span></h1>
-                            <span class="separator"></span>
-                        </div>
-                        <!-- End Section Title -->
-                        <!-- Service Content Block -->
-                        <div class="content-block content-service-block">
-                            <!-- Service Row -->
-                            <div class="row row-items">
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 row-item">
-                                    <div class="card-body text-center">
-                                        <div class="card-icon"><i class="fa fa-code"></i></div>
-                                        <div class="card-title">
-                                            <h4>Full Stack Development</h4>
-                                        </div>
-                                        <div class="card-info">
-                                            <p>Design the software system architecture and create the actual scalable web services, applications, and APIs.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Service Two -->
-                                <!-- Service Three -->
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 row-item">
-                                    <div class="card-body text-center">
-                                        <div class="card-icon"><i class="fa fa-cloud"></i></div>
-                                        <div class="card-title">
-                                            <h4>Cloud Engineering</h4>
-                                        </div>
-                                        <div class="card-info">
-                                            <p>Design and build advanced cloud-based solutions and migrate existing workloads to the cloud.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Service Three -->
-                                <!-- Service Four -->
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 row-item">
-                                    <div class="card-body text-center">
-                                        <div class="card-icon"><i class="fa fa-wrench"></i></div>
-                                        <div class="card-title">
-                                            <h4>Optimizing solutions</h4>
-                                        </div>
-                                        <div class="card-info">
-                                            <p>Troubleshoot errors, fix bugs, identify bottlenecks, and improve the efficiency of the software.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Service Five -->
-                            </div>
-                            <!-- End Service Row -->
-                        </div>
-                        <!-- End Service Content Block -->
-                        <!-- Testimonial Content Block -->
-                        <div id="testimonials" class="content-block testimonials-wrap">
-                            <!-- Section Sub Title -->
-                            <h3 class="section-subtitle text-center text-uppercase mb-4">Testimonial</h3>
-                            <!-- Section Sub Title -->
-                            <!-- Row -->
-                            <div class="row">
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <!-- Carousel Slider -->
-                                    <div id="carouselTestimonial" class="customers-testimonial carousel slide"
-                                        data-ride="carousel">
-                                        <!-- Carousel Items -->
-                                        <div class="carousel-inner">
-                                            <!-- Testimonial One -->
-                                            <div class="carousel-item text-center item active">
-                                                <img class="img-fluid img-circle" src="images/RawadProfile.jpeg"
-                                                    width="100" alt="Testimonial 1">
-                                                <div class="text-seperator text-justify">
-                                                    <p>I had the chance to work with Abbass on one of the critical RAMS projects. During our collaboration, Abbass constantly delivered on his commitments while following the highest development standards. Quickly Abbass became a key contributor to our project and one of the pillars of the development team. I thus highly recommend Abbass for any software development role as I believe he will be a great addition to any engineering activity.</p>
-                                                </div>
-                                                <div class="name text-uppercase"><a  href="https://www.linkedin.com/in/rawadn">Rawad Assaf</a></div>
-                                            </div>
-                                            <!-- End Testimonial One -->
-                                            <!-- Testimonial Two -->
-                                            <div class="carousel-item text-center item">
-                                                <img class="img-fluid img-circle" src="images/LoayProfile.jpeg"
-                                                    width="100" alt="Testimonial 2">
-                                                <div class="text-seperator text-justify">
-                                                    <p>Abbass makes things happen! He is very productive, consistently delivers high-quality work products, and meets deadlines. He has an in-depth understanding of modern IT technologies and a lot of deep technical background. He handles our product assignments with aplomb and diligence, displaying the ability to follow creative direction while adding his creative input diplomatically and usefully. Abbass is highly creative and a very easy-going person to work with, he is one of the best among all people I have ever met.</p>
-                                                </div>
-                                                <div class="name text-uppercase"><a href="https://www.linkedin.com/in/loay-amara-58475133">Loay Amara</a></div>
-                                            </div>
-                                            <!-- End Testimonial Two -->
-                                        </div>
-                                        <!-- End Carousel Items -->
-                                        <!-- Carousel Arrow -->
-                                        <ol class="carousel-indicators">
-                                            <li data-target="#carouselTestimonial" data-slide-to="0" class="active">
-                                            </li>
-                                            <li data-target="#carouselTestimonial" data-slide-to="1"></li>
-                                        </ol>
-                                        <!-- End Carousel Arrow -->
-                                        <!-- Carousel Dots -->
-                                        <a class="carousel-control-prev btn p-0 m-0" href="#carouselTestimonial"
-                                            role="button" data-slide="prev"><i
-                                                class="fa fa-angle-left carousel-controls" aria-hidden="true"></i></a>
-                                        <a class="carousel-control-next btn p-0 m-0" href="#carouselTestimonial"
-                                            role="button" data-slide="next"><i
-                                                class="fa fa-angle-right carousel-controls" aria-hidden="true"></i></a>
-                                        <!-- End Carousel Dots -->
-                                    </div>
-                                    <!-- End Carousel Slider -->
-                                </div>
-                            </div>
-                            <!-- End Row -->
-                        </div>
-                        <!-- End Testimonial Content Block -->
-                    </div>
-                    <!-- End Container -->
-                </div>
-            </section>
-            <!-- End Service Section -->
+			.hero-scroll-hint {
+				position: absolute;
+				bottom: 32px;
+				left: 50%;
+				transform: translateX(-50%);
+				font-family: var(--font-mono);
+				font-size: 11px;
+				letter-spacing: 0.18em;
+				color: var(--dim);
+				text-transform: uppercase;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
 
-       
+			/* SECTION SHELL */
+			section.block {
+				padding: 120px 0;
+				border-bottom: 1px solid var(--border);
+			}
+			.section-header {
+				margin-bottom: 64px;
+				max-width: 760px;
+			}
+			.section-header h2 {
+				font-family: var(--font-display);
+				font-size: clamp(34px, 4.2vw, 50px);
+				letter-spacing: -0.028em;
+				font-weight: 600;
+				line-height: 1.04;
+				margin-top: 18px;
+				text-wrap: balance;
+			}
+			.section-header p {
+				margin-top: 18px;
+				color: var(--muted);
+				max-width: 60ch;
+				font-size: 16px;
+				line-height: 1.6;
+			}
 
-            <!-- Contact Section -->
-            <section id="contact" class="section pp-scrollable bg-white contact card-inner">
-                <div class="card-inner-content h-100">
-                    <!-- Container -->
-                    <div class="container">
-                        <!-- Section Title -->
-                        <div class="section-title">
-                            <h1>Contact <span>Me</span></h1>
-                            <span class="separator"></span>
-                        </div>
-                        <!-- End Section Title -->
-                        <!-- Contact Info -->
-                        <div class="content-block contact-info-block">
-                            <!-- Row -->
-                            <div class="row row-items">
-                                <!-- Contact Address -->
-                                <div class="col-md-6 row-item d-flex align-items-stretch">
-                                    <div class="card-body d-flex flex-row">
-                                        <div class="card-icon"><i class="fa fa-map-marker"></i></div>
-                                        <div class="card-content ml-3">
-                                            <h3>My Address</h3>
-                                            <p>Beirut, Lebanon</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Contact Address -->
-                                <!-- Contact Social Profiles -->
-                                <div class="col-md-6 row-item d-flex align-items-stretch">
-                                    <div class="card-body d-flex flex-row">
-                                        <div class="card-icon"><i class="fa fa-share-alt"></i></div>
-                                        <div class="card-content ml-3">
-                                            <h3>Social Profiles</h3>
-                                            <div class="social-links d-flex flex-wrap">
-                                                <a href="https://github.com/AbbassJaber" data-toggle="tooltip" data-placement="top"
-                                                    data-original-title="Github"><i class="fa fa-github"></i></a>
-                                                <a href="https://www.linkedin.com/in/abbass-jaber" data-toggle="tooltip" data-placement="top"
-                                                    data-original-title="Linkedin"><i class="fa fa-linkedin"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Contact Social Profiles -->
-                                <!-- Contact Email -->
-                                <div class="col-md-6 row-item d-flex align-items-stretch">
-                                    <div class="card-body d-flex flex-row">
-                                        <div class="card-icon"><i class="fa fa-envelope"></i></div>
-                                        <div class="card-content ml-3">
-                                            <h3>Email Me</h3>
-                                            <p><a href="mailto:abbassjaber.online@gmail.com">abbassjaber.online@gmail.com</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Contact Email -->
-                                <!-- Contact Call -->
-                                <div class="col-md-6 row-item d-flex align-items-stretch">
-                                    <div class="card-body d-flex flex-row">
-                                        <div class="card-icon"><i class="fa fa-phone"></i></div>
-                                        <div class="card-content ml-3">
-                                            <h3>Call Me</h3>
-                                            <p><a href="tel:+96171509021">(+961) 71509021</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Contact Call -->
-                            </div>
-                            <!-- End Row -->
-                        </div>
-                        <!-- End Contact Info -->
-                        <!-- Contact Form -->
-                        <div class="content-block contact-form-block">
-                            <p class="mt-4 mb-3">Feel free to get in touch with me. I am always open to discussing new
-                                projects, creative ideas or opportunities to be part of your visions.</p>
-                        </div>
-                        <!-- End Contact Form -->
-                    </div>
-                    <!-- End Container -->
-                </div>
-                <!-- End Side Arrow -->
-            </section>
-            <!-- End contact Section -->
-        </main>
-        <!-- End Main Wrapper -->
+			/* ABOUT */
+			.about-grid {
+				display: grid;
+				grid-template-columns: 1.25fr 1fr;
+				gap: 80px;
+				align-items: start;
+			}
+			.about-bio {
+				font-size: 18px;
+				line-height: 1.65;
+				color: var(--fg);
+				max-width: 56ch;
+				text-wrap: pretty;
+			}
+			.about-bio p + p {
+				margin-top: 18px;
+			}
+			.about-bio em {
+				color: var(--accent);
+				font-style: normal;
+			}
 
-    </div>
-    <!-- End Page Wrapper -->
+			.stats-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1px;
+				background: var(--border);
+				border: 1px solid var(--border);
+				border-radius: 12px;
+				overflow: hidden;
+			}
+			.stat {
+				background: var(--bg-elev);
+				padding: 32px 26px;
+			}
+			.stat .num {
+				font-family: var(--font-display);
+				font-size: 52px;
+				line-height: 1;
+				letter-spacing: -0.035em;
+				font-weight: 600;
+			}
+			.stat .num .plus {
+				color: var(--accent);
+				font-size: 28px;
+				vertical-align: super;
+				line-height: 1;
+				margin-left: 2px;
+				font-weight: 500;
+			}
+			.stat .label {
+				margin-top: 14px;
+				font-family: var(--font-mono);
+				font-size: 11.5px;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: var(--muted);
+			}
 
+			/* TECH STACK */
+			.stack-grid {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 1px;
+				background: var(--border);
+				border: 1px solid var(--border);
+				border-radius: 12px;
+				overflow: hidden;
+			}
+			.stack-col {
+				background: var(--bg-elev);
+				padding: 30px 26px;
+			}
+			.stack-col h3 {
+				font-family: var(--font-mono);
+				font-size: 11.5px;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				color: var(--accent);
+				font-weight: 500;
+				margin-bottom: 24px;
+			}
+			.stack-list {
+				display: flex;
+				flex-direction: column;
+				gap: 11px;
+				list-style: none;
+			}
+			.stack-list li {
+				font-family: var(--font-display);
+				font-size: 17px;
+				letter-spacing: -0.012em;
+				color: var(--fg);
+				display: flex;
+				align-items: baseline;
+			}
+			.stack-list li .ver {
+				color: var(--dim);
+				font-family: var(--font-mono);
+				font-size: 11px;
+				margin-left: 8px;
+				letter-spacing: 0.04em;
+			}
 
-    <!-- *********** Plugins JS Files *********** -->
-    <!-- Jquery -->
-    <script src="js/fJjV16MfMDt2.js"></script>
-    <!-- Bootstrap -->
-    <script src="js/4dUdxvzv5cFn.js"></script>
-    <!-- Line Progressbar -->
-    <script src="js/BpJ2IsNbeDsb.js"></script>
-    <!-- Isotope Gallery -->
-    <script src="js/Fqyo0OZ9TW0L.js"></script>
-    <!-- Animate Headline -->
-    <script src="js/CMeSrUtg3CbM.js"></script>
-    <!-- Counter Up -->
-    <script src="js/uQMIxct3hwUk.js"></script>
-    <script src="js/DiaxtOVMshHh.js"></script>
-    <!-- Magnific Popup -->
-    <script src="js/sVDznRVZteUg.js"></script>
-    <!-- Pagepiling -->
-    <script src="js/Rvqo6llhL6Dr.js"></script>
+			/* EXPERIENCE */
+			.exp-list {
+				display: flex;
+				flex-direction: column;
+				gap: 0;
+				border-top: 1px solid var(--border);
+			}
+			.exp-item {
+				display: grid;
+				grid-template-columns: 240px 1fr;
+				gap: 56px;
+				padding: 38px 0;
+				border-bottom: 1px solid var(--border);
+			}
+			.exp-meta {
+				font-family: var(--font-mono);
+				font-size: 12.5px;
+				color: var(--muted);
+				padding-top: 8px;
+				line-height: 1.5;
+			}
+			.exp-meta .dates {
+				color: var(--accent);
+				display: block;
+				margin-bottom: 6px;
+				letter-spacing: 0.04em;
+			}
+			.exp-body h3 {
+				font-family: var(--font-display);
+				font-size: 25px;
+				letter-spacing: -0.022em;
+				font-weight: 600;
+				line-height: 1.2;
+			}
+			.exp-body h3 .at {
+				color: var(--muted);
+				font-weight: 400;
+			}
+			.exp-body ul {
+				margin-top: 20px;
+				padding-left: 0;
+				list-style: none;
+			}
+			.exp-body ul li {
+				font-size: 15px;
+				color: var(--muted);
+				padding-left: 26px;
+				position: relative;
+				line-height: 1.65;
+				max-width: 70ch;
+			}
+			.exp-body ul li + li {
+				margin-top: 8px;
+			}
+			.exp-body ul li::before {
+				content: "→";
+				position: absolute;
+				left: 0;
+				color: var(--accent);
+				font-family: var(--font-mono);
+			}
 
-    <!-- *********** Template JS Files *********** -->
-    <!-- Main JS -->
-    <script src="js/A9Y4aAiKOw2R.js"></script>
-    <!-- Switcher JS -->
-    <script src="js/eOFdv83vV8Fr.js"></script>
+			/* PROJECTS */
+			.projects-grid {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 24px;
+			}
+			.project {
+				border: 1px solid var(--border);
+				border-radius: 16px;
+				padding: 36px;
+				background: var(--bg-elev);
+				display: grid;
+				grid-template-columns: 1fr 1.55fr;
+				gap: 48px;
+				align-items: stretch;
+				position: relative;
+				overflow: hidden;
+			}
+			.project::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				pointer-events: none;
+				background: radial-gradient(
+					420px 240px at 90% 0%,
+					color-mix(in oklch, var(--accent) 8%, transparent),
+					transparent 65%
+				);
+				opacity: 0.6;
+			}
+			.project-thumb {
+				background: linear-gradient(
+					135deg,
+					oklch(22% 0.012 230),
+					oklch(17% 0.012 200)
+				);
+				border: 1px solid var(--border);
+				border-radius: 10px;
+				min-height: 220px;
+				position: relative;
+				overflow: hidden;
+				display: flex;
+			}
+			.project-thumb .placeholder-art {
+				font-family: var(--font-mono);
+				font-size: 11px;
+				color: var(--dim);
+				position: absolute;
+				left: 22px;
+				bottom: 18px;
+				right: 22px;
+				top: 22px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.project-thumb .placeholder-art .top {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				color: var(--accent);
+				font-size: 11px;
+				letter-spacing: 0.04em;
+			}
+			.project-thumb .placeholder-art .top .live {
+				color: var(--accent);
+			}
+			.project-thumb .placeholder-art .ascii {
+				color: var(--muted);
+				font-size: 12px;
+				line-height: 1.65;
+				opacity: 0.85;
+			}
+			.project-thumb .placeholder-art .foot {
+				color: var(--dim);
+				font-size: 11px;
+			}
 
-</body>
+			.project-meta {
+				display: flex;
+				flex-direction: column;
+				position: relative;
+			}
+			.project-meta .num {
+				font-family: var(--font-mono);
+				color: var(--accent);
+				font-size: 11.5px;
+				letter-spacing: 0.18em;
+				margin-bottom: 18px;
+			}
+			.project-meta h3 {
+				font-family: var(--font-display);
+				font-size: 32px;
+				letter-spacing: -0.025em;
+				font-weight: 600;
+				line-height: 1.05;
+			}
+			.project-meta p {
+				margin-top: 16px;
+				font-size: 16px;
+				color: var(--muted);
+				line-height: 1.6;
+				max-width: 60ch;
+			}
+			.tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+				margin-top: 24px;
+			}
+			.tag {
+				font-family: var(--font-mono);
+				font-size: 11px;
+				letter-spacing: 0.04em;
+				color: var(--muted);
+				padding: 6px 10px;
+				border: 1px solid var(--border-strong);
+				border-radius: 4px;
+				background: color-mix(in oklch, var(--bg) 50%, transparent);
+			}
+			.project-links {
+				margin-top: 28px;
+				display: flex;
+				gap: 22px;
+				font-family: var(--font-mono);
+				font-size: 12.5px;
+			}
+			.project-links a {
+				color: var(--muted);
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+			}
+			.project-links a .arr {
+				color: var(--accent);
+			}
 
+			/* AI-NATIVE */
+			.ai-block {
+				background: var(--bg-elev);
+				border: 1px solid var(--border);
+				border-radius: 20px;
+				padding: 64px;
+				position: relative;
+				overflow: hidden;
+			}
+			.ai-block::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				pointer-events: none;
+				background: radial-gradient(
+						700px 360px at 105% -10%,
+						color-mix(in oklch, var(--accent) 18%, transparent),
+						transparent 60%
+					),
+					radial-gradient(
+						500px 280px at -10% 110%,
+						color-mix(in oklch, var(--accent) 10%, transparent),
+						transparent 60%
+					);
+			}
+			.ai-block-inner {
+				position: relative;
+				display: grid;
+				grid-template-columns: 1.4fr 1fr;
+				gap: 80px;
+				align-items: start;
+			}
+			.ai-block h2 {
+				font-family: var(--font-display);
+				font-size: clamp(34px, 4vw, 48px);
+				letter-spacing: -0.028em;
+				line-height: 1.04;
+				font-weight: 600;
+				text-wrap: balance;
+				margin-top: 18px;
+			}
+			.ai-block h2 em {
+				color: var(--accent);
+				font-style: normal;
+			}
+			.ai-block .lede {
+				margin-top: 22px;
+				font-size: 17px;
+				color: var(--muted);
+				max-width: 56ch;
+				line-height: 1.65;
+			}
+			.ai-block .lede + .lede {
+				margin-top: 16px;
+			}
+			.ai-cells {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1px;
+				background: var(--border);
+				border: 1px solid var(--border);
+				border-radius: 12px;
+				overflow: hidden;
+			}
+			.ai-cell {
+				background: var(--bg-elev);
+				padding: 24px;
+			}
+			.ai-cell .k {
+				font-family: var(--font-mono);
+				font-size: 11px;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+				color: var(--accent);
+				font-weight: 500;
+			}
+			.ai-cell .v {
+				margin-top: 14px;
+				font-family: var(--font-display);
+				font-size: 18px;
+				letter-spacing: -0.018em;
+				font-weight: 500;
+			}
+			.ai-cell .d {
+				margin-top: 8px;
+				font-size: 13.5px;
+				color: var(--muted);
+				line-height: 1.55;
+			}
+
+			/* CERTS */
+			.certs-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 18px;
+			}
+			.cert {
+				border: 1px solid var(--border);
+				border-radius: 14px;
+				padding: 28px;
+				background: var(--bg-elev);
+				display: flex;
+				flex-direction: column;
+				gap: 18px;
+				min-height: 200px;
+			}
+			.cert-mark {
+				width: 48px;
+				height: 48px;
+				border-radius: 8px;
+				border: 1px solid var(--border-strong);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-family: var(--font-mono);
+				font-size: 12px;
+				color: var(--accent);
+				background: color-mix(in oklch, var(--accent) 8%, transparent);
+				letter-spacing: 0.04em;
+				font-weight: 500;
+			}
+			.cert h3 {
+				font-family: var(--font-display);
+				font-size: 18px;
+				letter-spacing: -0.018em;
+				font-weight: 600;
+				line-height: 1.25;
+			}
+			.cert .issuer {
+				font-family: var(--font-mono);
+				font-size: 12px;
+				color: var(--muted);
+				margin-top: -8px;
+			}
+			.cert .year {
+				font-family: var(--font-mono);
+				font-size: 11.5px;
+				color: var(--dim);
+				margin-top: auto;
+				padding-top: 16px;
+				border-top: 1px solid var(--border);
+				letter-spacing: 0.04em;
+			}
+
+			/* TESTIMONIALS */
+			.testimonials-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 18px;
+			}
+			.tcard {
+				border: 1px solid var(--border);
+				border-radius: 14px;
+				padding: 32px;
+				background: var(--bg-elev);
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				position: relative;
+			}
+			.tcard::before {
+				content: "\201C";
+				position: absolute;
+				top: 24px;
+				right: 28px;
+				font-family: var(--font-display);
+				font-size: 80px;
+				line-height: 1;
+				color: var(--accent);
+				opacity: 0.18;
+				font-weight: 700;
+				pointer-events: none;
+			}
+			.tcard .quote {
+				font-size: 15px;
+				line-height: 1.7;
+				color: var(--muted);
+				flex: 1;
+				position: relative;
+				z-index: 1;
+				text-wrap: pretty;
+			}
+			.tcard .author {
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+				padding-top: 18px;
+				border-top: 1px solid var(--border);
+			}
+			.tcard .author .name {
+				font-family: var(--font-display);
+				font-size: 15px;
+				font-weight: 600;
+				letter-spacing: -0.012em;
+			}
+			.tcard .author .role {
+				font-family: var(--font-mono);
+				font-size: 11px;
+				letter-spacing: 0.06em;
+				color: var(--dim);
+			}
+
+			/* CONTACT */
+			.contact {
+				padding: 160px 0 140px;
+			}
+			.contact h2 {
+				font-family: var(--font-display);
+				font-size: clamp(56px, 7.6vw, 102px);
+				letter-spacing: -0.038em;
+				line-height: 0.97;
+				font-weight: 600;
+				max-width: 18ch;
+				text-wrap: balance;
+				margin-top: 28px;
+			}
+			.contact h2 em {
+				color: var(--accent);
+				font-style: normal;
+			}
+			.contact .lede {
+				margin-top: 26px;
+				max-width: 50ch;
+				color: var(--muted);
+				font-size: 17px;
+				line-height: 1.6;
+			}
+			.contact .links {
+				margin-top: 64px;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 0;
+				border-top: 1px solid var(--border);
+			}
+			.contact .links a {
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+				padding: 22px 4px;
+				border-bottom: 1px solid var(--border);
+				font-family: var(--font-display);
+				font-size: 19px;
+				letter-spacing: -0.012em;
+				gap: 24px;
+			}
+			.contact .links a:not(:last-child) {
+				padding-right: 24px;
+				border-right: 1px solid var(--border);
+			}
+			.contact .links a .label {
+				color: var(--muted);
+				font-family: var(--font-mono);
+				font-size: 11px;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+			}
+			.contact .links a .val {
+				color: var(--fg);
+			}
+
+			/* FOOTER */
+			footer {
+				padding: 36px 0 48px;
+				border-top: 1px solid var(--border);
+				font-family: var(--font-mono);
+				font-size: 12px;
+				color: var(--dim);
+				letter-spacing: 0.04em;
+			}
+			footer .row {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			footer .row a {
+				color: var(--muted);
+			}
+
+			/* tiny screen graceful degrade for the comp */
+			@media (max-width: 960px) {
+				.about-grid,
+				.ai-block-inner {
+					grid-template-columns: 1fr;
+					gap: 48px;
+				}
+				.stack-grid {
+					grid-template-columns: repeat(2, 1fr);
+				}
+				.project {
+					grid-template-columns: 1fr;
+				}
+				.exp-item {
+					grid-template-columns: 1fr;
+					gap: 18px;
+				}
+				.certs-grid {
+					grid-template-columns: 1fr;
+				}
+				.testimonials-grid {
+					grid-template-columns: 1fr;
+				}
+				.contact .links {
+					grid-template-columns: 1fr;
+				}
+				.contact .links a:not(:last-child) {
+					border-right: none;
+					padding-right: 4px;
+				}
+				.nav-links {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="nav">
+			<div class="nav-inner">
+				<a class="logo" href="#">
+					<span class="logo-mark">AJ</span>
+					<span class="logo-name">Abbass Jaber</span>
+				</a>
+				<div class="nav-links">
+					<a href="#about"><span class="nav-num">01</span>About</a>
+					<a href="#stack"><span class="nav-num">02</span>Stack</a>
+					<a href="#experience"><span class="nav-num">03</span>Experience</a>
+					<a href="#ai"><span class="nav-num">04</span>AI-Native</a>
+					<a href="#certs"><span class="nav-num">05</span>Certs</a>
+					<a href="#testimonials"
+						><span class="nav-num">06</span>Testimonials</a
+					>
+				</div>
+				<a class="nav-cta" href="#contact">Contact <span class="ar">↗</span></a>
+			</div>
+		</nav>
+
+		<section class="hero">
+			<div class="hero-grid-bg"></div>
+			<div class="hero-glow"></div>
+			<div class="container hero-inner">
+				<div class="hero-meta">
+					<span class="status"
+						><span class="pulse"></span>Available for senior / lead roles</span
+					>
+					<span class="sep">·</span>
+					<span>Beirut, Lebanon</span>
+					<span class="sep">·</span>
+					<span>UTC+2/3</span>
+				</div>
+				<h1>
+					Abbass Jaber<br /><span class="role">Lead Full Stack Engineer.</span>
+				</h1>
+				<p class="tagline">
+					I build scalable products — backend to pixel. Six years shipping
+					production software across React, Angular, and .NET, with an AI-native
+					engineering practice that treats LLMs as real teammates.
+				</p>
+				<div class="hero-cta-row">
+					<a class="btn btn-primary" href="#experience"
+						>View experience <span class="arrow">→</span></a
+					>
+					<a class="btn btn-secondary" href="#contact">Contact me</a>
+				</div>
+			</div>
+			<div class="hero-scroll-hint"><span>scroll</span><span>↓</span></div>
+		</section>
+
+		<section class="block" id="about">
+			<div class="container">
+				<div class="section-header">
+					<span class="eyebrow">01 / About</span>
+					<h2>
+						A senior generalist with a backend-first instinct and frontend
+						craft.
+					</h2>
+				</div>
+				<div class="about-grid">
+					<div class="about-bio">
+						<p>
+							I'm a Lead Full Stack Engineer based in Beirut. I've spent the
+							last six years shipping production software end-to-end — React and
+							Angular on the frontend, <em>.NET and Node</em> on the backend —
+							across SaaS startups and enterprise teams in MENA and globally.
+						</p>
+						<p>
+							Lately, I'm obsessed with AI-native engineering: building
+							codebases that read well to LLMs, and workflows where Claude Code,
+							Cursor, and MCP are real collaborators — not novelties. I lead by
+							example, not slide deck.
+						</p>
+						<p>
+							When I'm not shipping, I'm reading systems-design papers,
+							sketching architecture, or arguing REST vs. GraphQL with whoever
+							will argue back.
+						</p>
+					</div>
+					<div class="stats-grid">
+						<div class="stat">
+							<div class="num">6<span class="plus">+</span></div>
+							<div class="label">Years shipping</div>
+						</div>
+						<div class="stat">
+							<div class="num">4</div>
+							<div class="label">Engineering teams</div>
+						</div>
+						<div class="stat">
+							<div class="num">5k<span class="plus">+</span></div>
+							<div class="label">GitHub contributions</div>
+						</div>
+						<div class="stat">
+							<div class="num">3</div>
+							<div class="label">Certifications</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="block" id="stack">
+			<div class="container">
+				<div class="section-header">
+					<span class="eyebrow">02 / Stack</span>
+					<h2>The tools I reach for, day one.</h2>
+					<p>
+						Opinionated, but pragmatic. I've shipped each of these to production
+						— most of them within the last year.
+					</p>
+				</div>
+				<div class="stack-grid">
+					<div class="stack-col">
+						<h3>Frontend</h3>
+						<ul class="stack-list">
+							<li>React <span class="ver">18+</span></li>
+							<li>Angular <span class="ver">16+</span></li>
+							<li>TypeScript</li>
+							<li>RxJS</li>
+							<li>Tailwind CSS</li>
+						</ul>
+					</div>
+					<div class="stack-col">
+						<h3>Backend</h3>
+						<ul class="stack-list">
+							<li>C# / ASP.NET Core</li>
+							<li>EF Core</li>
+							<li>Node.js</li>
+							<li>Postgres</li>
+							<li>Redis</li>
+						</ul>
+					</div>
+					<div class="stack-col">
+						<h3>Architecture &amp; Cloud</h3>
+						<ul class="stack-list">
+							<li>MediatR</li>
+							<li>CQRS · DDD</li>
+							<li>Clean Architecture</li>
+							<li>Docker · Kubernetes</li>
+							<li>AWS · GitHub Actions</li>
+						</ul>
+					</div>
+					<div class="stack-col">
+						<h3>AI &amp; Tooling</h3>
+						<ul class="stack-list">
+							<li>Claude Code</li>
+							<li>Cursor</li>
+							<li>MCP</li>
+							<li>Custom prompts</li>
+							<li>LLM-friendly repos</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="block" id="experience">
+			<div class="container">
+				<div class="section-header">
+					<span class="eyebrow">03 / Experience</span>
+					<h2>Four roles. Each one a different kind of leverage.</h2>
+				</div>
+				<div class="exp-list">
+					<div class="exp-item">
+						<div class="exp-meta">
+							<span class="dates">Jan 2025 — Present</span>
+							Aviation · Automotive
+						</div>
+						<div class="exp-body">
+							<h3>
+								Aspire Software
+								<span class="at">— Lead Full Stack Engineer</span>
+							</h3>
+							<ul>
+								<li>
+									Led the development of scalable full-stack applications using
+									React, TypeScript, Node.js, and C#/.NET 9 (ASP.NET Core),
+									deployed on AWS for high availability
+								</li>
+								<li>
+									Architected backend services following DDD and CQRS patterns
+									with MediatR — modeling bounded contexts, aggregates, and
+									domain events to keep business logic clean and maintainable
+								</li>
+								<li>
+									Optimized backend API endpoints to reduce response times by
+									60–70% on heavy bulk-change operations
+								</li>
+								<li>
+									Leveraged Cursor, Claude Code, and custom system prompts
+									daily; established LLM-friendly codebase conventions, cutting
+									feature development time from days to hours
+								</li>
+								<li>
+									Led code reviews and supported team members in growing their
+									engineering craft
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="exp-item">
+						<div class="exp-meta">
+							<span class="dates">Apr 2023 — Jan 2025</span>
+							Shipping
+						</div>
+						<div class="exp-body">
+							<h3>
+								Sword Group
+								<span class="at">— Senior Full Stack Developer</span>
+							</h3>
+							<ul>
+								<li>
+									Designed and implemented backend APIs and services with
+									Node.js and PHP, ensuring scalability, reliability, and
+									seamless integration with data-intensive components
+								</li>
+								<li>
+									Contributed to a micro-frontend architecture using Angular and
+									Nx monorepo, building modular, reusable UI components that
+									supported multiple applications
+								</li>
+								<li>
+									Leveraged RxJS, PrimeNG, and Tailwind CSS to deliver
+									responsive, accessible interfaces with improved user
+									experience
+								</li>
+								<li>
+									Participated in code reviews and collaborated closely with
+									product managers and backend teams to align technical
+									solutions with product objectives
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="exp-item">
+						<div class="exp-meta">
+							<span class="dates">Feb 2021 — Mar 2023</span>
+							Healthcare
+						</div>
+						<div class="exp-body">
+							<h3>Tuhoon <span class="at">— Full Stack Developer</span></h3>
+							<ul>
+								<li>
+									Designed and developed RESTful APIs with Node.js &amp; Express
+									serving ~10K daily users, leveraging Redis for caching and
+									integrating the ELK stack for observability
+								</li>
+								<li>
+									Built CMS using React-admin and developed B2B dashboard with
+									React &amp; Material UI
+								</li>
+								<li>
+									Designed and implemented CI/CD pipelines, deploying to AWS and
+									configuring NGINX and PM2 for production
+								</li>
+								<li>
+									Developed server-side payment integration for Google Play and
+									Apple App Store subscriptions
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="exp-item">
+						<div class="exp-meta">
+							<span class="dates">Sep 2019 — Jan 2021</span>
+							Finance
+						</div>
+						<div class="exp-body">
+							<h3>Venbil <span class="at">— Full Stack Developer</span></h3>
+							<ul>
+								<li>
+									Built and integrated APIs (REST and GraphQL/Apollo) with
+									NestJS, implementing robust authentication flows and secure
+									data handling to support web and mobile applications
+								</li>
+								<li>
+									Built and maintained responsive frontend interfaces using
+									React, Redux, Shadcn, and Tailwind CSS
+								</li>
+								<li>
+									Collaborated directly with designers and product managers to
+									deliver features in agile sprints
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="block" id="ai">
+			<div class="container">
+				<div class="ai-block">
+					<div class="ai-block-inner">
+						<div>
+							<span class="eyebrow">04 / AI-Native Engineering</span>
+							<h2>
+								I treat the LLM as a <em>real teammate</em> — not a snippet
+								generator.
+							</h2>
+							<p class="lede">
+								Claude Code, Cursor, and MCP aren't a productivity hack on the
+								side of my workflow — they are the workflow. I write codebases
+								that read well to models, ship custom system prompts as
+								artifacts, and design tools the LLM can actually call.
+							</p>
+							<p class="lede">
+								It's a deliberate practice: legible state, typed boundaries,
+								opinionated repo READMEs, and eval harnesses that catch
+								regressions before the team does.
+							</p>
+						</div>
+						<div class="ai-cells">
+							<div class="ai-cell">
+								<div class="k">Tooling</div>
+								<div class="v">Claude Code · Cursor</div>
+								<div class="d">
+									Daily-driver IDEs. The model is in the loop on every
+									non-trivial change.
+								</div>
+							</div>
+							<div class="ai-cell">
+								<div class="k">Protocol</div>
+								<div class="v">MCP servers</div>
+								<div class="d">
+									Custom servers expose engineering ops as typed, callable
+									tools.
+								</div>
+							</div>
+							<div class="ai-cell">
+								<div class="k">Prompts</div>
+								<div class="v">Versioned system prompts</div>
+								<div class="d">
+									Treated as code — reviewed, tested, and shipped behind feature
+									flags.
+								</div>
+							</div>
+							<div class="ai-cell">
+								<div class="k">Codebase</div>
+								<div class="v">LLM-legible repos</div>
+								<div class="d">
+									READMEs, type signatures, and module boundaries that read well
+									to a model.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="block" id="certs">
+			<div class="container">
+				<div class="section-header">
+					<span class="eyebrow">05 / Certifications</span>
+					<h2>Three pieces of paper.</h2>
+				</div>
+				<div class="certs-grid">
+					<div class="cert">
+						<div class="cert-mark">AWS</div>
+						<h3>AWS Certified<br />Cloud Practitioner</h3>
+						<div class="issuer">Amazon Web Services</div>
+					</div>
+					<div class="cert">
+						<div class="cert-mark">AI</div>
+						<h3>AI Bootcamp</h3>
+						<div class="issuer">Zaka</div>
+					</div>
+					<div class="cert">
+						<div class="cert-mark">FS</div>
+						<h3>Full-Stack Web Development Bootcamp</h3>
+						<div class="issuer">SE Factory</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="block" id="testimonials">
+			<div class="container">
+				<div class="section-header">
+					<span class="eyebrow">06 / Testimonials</span>
+					<h2>What colleagues say.</h2>
+				</div>
+				<div class="testimonials-grid">
+					<div class="tcard">
+						<p class="quote">
+							Abbass constantly delivered on his commitments while following the
+							highest development standards. Quickly Abbass became a key
+							contributor to our project and one of the pillars of the
+							development team. I highly recommend Abbass for any software
+							development role.
+						</p>
+						<div class="author">
+							<span class="name">Rawad Assaf</span>
+							<span class="role">Founding Partner · RAMS</span>
+						</div>
+					</div>
+
+					<div class="tcard">
+						<p class="quote">
+							Abbass makes things happen! He is very productive, consistently
+							delivers high-quality work products, and meets deadlines. He has
+							an in-depth understanding of modern IT technologies and a lot of
+							deep technical background. He is one of the best among all people
+							I have ever met.
+						</p>
+						<div class="author">
+							<span class="name">Loay Amara</span>
+							<span class="role">Director of Engineering · Shahid</span>
+						</div>
+					</div>
+
+					<div class="tcard">
+						<p class="quote">
+							He consistently demonstrated deep expertise in building
+							responsive, scalable front-end experiences while maintaining a
+							strong emphasis on code quality and long-term maintainability. A
+							collaborative and reliable team member who contributes positively
+							to technical discussions and design decisions.
+						</p>
+						<div class="author">
+							<span class="name">Igor Tishchenko</span>
+							<span class="role">Principal Software Engineer · Microsoft</span>
+						</div>
+					</div>
+
+					<div class="tcard">
+						<p class="quote">
+							Abbass' passion and ability to learn new skills impressed me. As
+							our first hire and first engineer, his contribution to Tuhoon was
+							immense. Abbass is a solid engineer, fast learner, and great team
+							player. I am happy to have worked with him.
+						</p>
+						<div class="author">
+							<span class="name">Fares Ghandour</span>
+							<span class="role">Founder · Wamda · Tuhoon · FI Holdings</span>
+						</div>
+					</div>
+
+					<div class="tcard">
+						<p class="quote">
+							Abbass has a great amount of commitment and a professional work
+							ethic. No matter the issue's complexity or the time, Abbass is
+							always available with full support and a solution in mind no
+							matter what the challenge.
+						</p>
+						<div class="author">
+							<span class="name">Ali Alzyoud</span>
+							<span class="role">Frontend Team Lead · Shahid</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact" id="contact">
+			<div class="container">
+				<span class="eyebrow">07 / Contact</span>
+				<h2>Let's build <em>something.</em></h2>
+				<p class="lede">
+					Looking for senior or lead engineering work — full-time, part-time, or
+					contract — at companies where craft, architecture, and AI-native
+					practice are taken seriously.
+				</p>
+				<div class="links">
+					<a href="mailto:abbassjaber.online@gmail.com">
+						<span class="label">Email</span>
+						<span class="val">abbassjaber.online@gmail.com →</span>
+					</a>
+					<a href="https://linkedin.com/in/abbass-jaber">
+						<span class="label">LinkedIn</span>
+						<span class="val">/in/abbass-jaber →</span>
+					</a>
+					<a href="https://github.com/AbbassJaber">
+						<span class="label">GitHub</span>
+						<span class="val">AbbassJaber →</span>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<span>© 2026 Abbass Jaber · Beirut, Lebanon</span>
+					<span><a href="interaction-spec.html">Interaction spec →</a></span>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
